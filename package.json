@@ -2,13 +2,16 @@
   "name": "stav-admin",
   "version": "0.1.0",
   "private": true,
+  "module": "esm/index.js",
   "dependencies": {
+    "query-string": "~5.1.1",
     "prop-types": "^15.7.2",
     "ra-data-json-server": "^2.9.8",
     "react": "^16.12.0",
     "react-admin": "^2.9.8",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "typescript": "*"
   },
   "scripts": {
     "start": "react-scripts start",
