@@ -1,11 +1,11 @@
 import {AUTH_LOGIN, AUTH_LOGOUT, AUTH_ERROR, AUTH_CHECK} from 'react-admin';
 //TO-DO - Change this to real api end point
-const API_END_POINT = 'https://mydomain.com';
+const API_END_POINT = 'http://localhost:3001';
 export default (type, params) => {
     // called when the user attempts to log in
     if (type === AUTH_LOGIN) {
         const {username, password} = params;
-        const request = new Request(`${API_END_POINT}/authenticate`, {
+        const request = new Request(`${API_END_POINT}/signin`, {
             method: 'POST',
             body: JSON.stringify({username, password}),
             headers: new Headers({'Content-Type': 'application/json'}),
