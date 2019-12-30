@@ -1,7 +1,7 @@
 import { fetchUtils } from 'react-admin';
 import { stringify } from 'query-string';
 
-const apiUrl = 'http://localhost:3001/';
+const apiUrl = 'http://localhost:3001';
 const httpClient = fetchUtils.fetchJson;
 
 export default {
@@ -53,7 +53,7 @@ export default {
         }));
     },
 
-    update: (resource, params) =>
+    /* update: (resource, params) =>
         httpClient(`${apiUrl}/${resource}/${params.id}`, {
             method: 'PUT',
             body: JSON.stringify(params.data),
@@ -90,5 +90,5 @@ export default {
             method: 'DELETE',
             body: JSON.stringify(params.data),
         }).then(({ json }) => ({ data: json }));
-    },
+    }, */
 };
